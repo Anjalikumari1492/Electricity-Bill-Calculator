@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="calculator-card">
+            <h1>Electricity Bill Calculator</h1>
+            <p class="subtitle">Enter the units consumed to calculate your bill.</p>
+
+            <div class="input-group">
+                <label for="units">Units Consumed</label>
+                <input type="number" id="units" placeholder="Example: 250" min="0" step="1">
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="calculate-btn" onclick="calculateBill()">Calculate Bill</button>
+                <button type="button" class="reset-btn" onclick="resetCalculator()">Reset</button>
+            </div>
+
+            <p id="errorMessage" class="error-message"></p>
+
+            <div id="result" class="result-box">
+                <h2>Bill Details</h2>
+                <table>
+                    <tr><td>Units Consumed</td><td id="displayUnits">-</td></tr>
+                    <tr><td>Unit Price</td><td id="displayPrice">-</td></tr>
+                </table>
+                <div class="slab-section">
+                    <h3>Slab-wise Calculation</h3>
+                    <div id="slabCalculation" class="calculation-lines">Enter units and click Calculate Bill.</div>
+                </div>
+                <div class="total-row">Total Bill <span id="totalBill">₹0.00</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
